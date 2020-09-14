@@ -74,7 +74,7 @@ npm i react-router @types/react-router react-router-dom @types/react-router-dom 
 
 Feel free to test another `npm run dev` after these installations to make sure everything is working clean.
 
-If everything seems fine then you're ready to go!
+If everything seems fine then you're ready to go ahead and push this to GitHub as your starting point. (note Stacey+Adam: DM me with your URL!)
 
 ### Exam Requirements
 
@@ -96,3 +96,41 @@ You'll need to connect your schema to your Node project, and have API routes tha
 * Register
 	* Allow a user to register themselves in your schema and receive a token upon successful registration
 
+*Advice:* As you write each route make sure it responds correctly in Postman!  Otherwise you may be left scratching your head later. 😉
+
+#### Client
+
+Create an React site in the client folder of your project
+* Use routing
+* Use your utility/fetch to interact with your API
+* Use localStorage to handle front-end auth
+
+##### Views/Routes
+* /
+	* Show a page welcoming the user to your book store
+	* Have a link to your book listing
+	* Have a link to login/register views
+* /login
+	* Show a page with input fields for email and password to login an existing user.  It should send the user back to the list view upon success.
+* /register
+	* Show a page with input fields for name, email, and password to register a user new user.  It should send the user back to the list view upon success. 
+* /books
+	* Show a page listing the books you have available. The listing should include the title, author, price (formatted as currency), and category name for each book.
+	* Each item in the listing should have a link to the single view
+* /books/new
+	* Show a page with input fields for title, author, and price. You will also need to have a select (drop-down) box that shows all categories in the system, allowing the book to be assigned a category. The database will not allow a book to be created without a category.
+	* Saving the new book successfully should send the user back to the list view.
+	* Should require user to be logged in
+* /books/:id/update
+	* Show a page with input fields prepopulated with the specified book data. The page should include input fields for title, author, and price. You will also need to have a select (drop-down) box that shows all categories in the system, allowing the book to be assigned to a different category.
+	* Saving the updated book successfully should send the user back to either the single view or the list view (your choice).
+	* Should require user to be logged in.
+* /books/:id
+	* Show a page that displays information for just the indicated book. The page should include the title, author, price (formatted as currency), and category name for the book.
+	* Should also contain Edit and Delete buttons/icons
+	* Clicking the delete button should delete the book and send them to the book list
+	* Clicking the edit button should send the user to the edit book component
+
+##### Submission Instructions
+
+You need to commit about every 30 minutes during the exam, set your phone or a computer widget to remind you. When you are finished, make sure you have PUSHed to github. You will not be able to push to the repository once the assessment is finished. 
